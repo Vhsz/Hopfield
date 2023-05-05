@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>Визуализация нейросети Хопфилда</title>
+</head>
+
+<body>
+    <div>
+        <label for="userCanvas">Входной сигнал</label>
+        <canvas id="userCanvas" width="450" height="450">
+            Ваш браузер не поддерживает Canvas
+        </canvas>
+        <label for="netCanvas">Восстановленный сигнал</label>
+        <canvas id="netCanvas" width="450" height="450">
+            Ваш браузер не поддерживает Canvas
+        </canvas>
+    </div>
+    <div>
+        <label for="stepper" style="position: relative;">Размер сетки</label>
+        <input type="range" id="stepper" min="4" max="12" value="10" step="1">
+    </div>
+    <div>
+        <button id="resetButton">
+            Очистить
+        </button>
+        <button id="memoryButton">
+            Запомнить
+        </button>
+        <button class="popup" id="recognizeButton">
+            Распознать
+            <span class="popuptext" id="popup"> Не могу вспомнить образ :( </span>
+        </button>
+    </div>
+
+    <!--Где-то в html подключаем библиотеку lodash: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
